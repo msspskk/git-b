@@ -19,11 +19,11 @@ let first = 13.123456789;
 let second = 2.123;
 let precision = 5;
 
-let firstNormalized = Math.round(
-    ( first - 13 ) * Math.pow(10, precision)
+let firstNormalized = Math.floor(
+    ( first - Math.floor(first) ) * Math.pow(10, precision)
 );
-let secondNormalized = Math.round(
-    ( second - 2 )* Math.pow(10, precision)
+let secondNormalized = Math.floor(
+    ( second - Math.floor(second) )* Math.pow(10, precision)
 );
 
 console.log(firstNormalized);
